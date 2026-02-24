@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "things3-mcp"
+version = "0.1.0"
+description = "Things 3 MCP server — todos with checklist support via URL scheme"
+readme = "README.md"
+license = "BSD-3-Clause"
+requires-python = ">=3.11"
+authors = [{ name = "wellerbp" }]
+keywords = ["mcp", "things3", "todo", "productivity"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: MacOS",
+]
+dependencies = [
+    "mcp[cli]",
+    "things.py",
+]
+
+[project.scripts]
+things3-mcp = "things3_mcp.server:main"
+
+[project.urls]
+Repository = "https://github.com/wellerbp/mcp-servers"
